@@ -1,0 +1,31 @@
+@keyframes fade-in-left {
+  0% {
+    transform: translate(-25%, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+.transitionSlideIn {
+  opacity: 1;
+  animation: fade-in-left 5s 10;
+}
+body {
+  height: 3000px;
+  padding-top: 250px;
+  background: white;
+}
+h1 {
+  background: black;
+  color: white;
+  text-align: center;
+}
+div.ant-itm,
+div.itm {
+  margin-top: 100px;
+}
+.itm {
+  opacity: 0;
+}
