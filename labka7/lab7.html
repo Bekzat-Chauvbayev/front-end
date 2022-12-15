@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lab6</title>
+  </head>
+  <body bgcolor="grey">
+    <form action="" autocomplete="on">
+      <label for="nick">Your Nickname:</label>
+      <input type="text" id="nick" name="nick" autofocus /><br /><br />
+      <label for="gmail">Your email:</label>
+      <input type="text" name="gmail" id="gmail" /><br /><br /><br />
+
+      <br />
+      <label for="">Your ID-series</label><br />
+      <input type="text" name="maxle" id="maxle" maxlength="12" /><br /><br />
+      <label for="">Your birthday:</label><br />
+      <input id="datee" type="date" min="2010-01-01T00:00" /> <br /><br />
+    </form>
+    <form>
+      <label for="">Your gender:</label><br />
+      <input type="radio" id="mal" name="fav_language" value="mal" />
+      <label for="mal">Male</label><br />
+      <input type="radio" id="fem" name="fav_language" value="fem" />
+      <label for="fem">Female</label><br />
+    </form>
+    <form action="">
+      <label for="">what musical instruments do you know how to play?</label
+      ><br />
+      <input type="checkbox" id="v" name="v" value="dom" />
+      <label for="v"> Dombyra</label><br />
+      <input type="checkbox" id="v2" name="v2" value="gui" />
+      <label for="vehicle2"> Guitar</label><br />
+      <input type="checkbox" id="v3" name="v3" value="kob" />
+      <label for="vehicle3"> Kobyz</label><br /><br />
+      <label for="myfile">Select a file:</label><br />
+      <input type="file" id="myfile" name="myfile" /><br /><br /><br />
+      <label for="">Choose favourite teacher:</label>
+      <br />
+      <select name="teachers" id="teachers">
+        <option value="Kuka">Kuanishbek Mamay</option>
+        <option value="Zhan">Zhan Zhaksylyk</option>
+        <option value="Maksat">Maksat Galiev</option>
+        <option value="Dauren">Dauren Ayazbaev</option>
+        <option value="all">Vse luwchie</option>
+        <br />
+
+        <script>
+          var today = new Date();
+          var dd = today.getDate();
+          var mm = today.getMonth() + 1;
+          var yyyy = today.getFullYear();
+
+          if (dd < 10) {
+            dd = "0" + dd;
+          }
+
+          if (mm < 10) {
+            mm = "0" + mm;
+          }
+
+          today = yyyy + "-" + mm + "-" + dd;
+          document.getElementById("datee").setAttribute("max", today);
+        </script>
+      </select>
+    </form>
+  </body>
+</html>
